@@ -37,15 +37,23 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        /* Oculta o iframe para apenas tocar o áudio */
-        #youtube-player {
-            display: none;
+        /* Oculta o iframe */
+        .youtube-player {
+            width: 0;
+            height: 0;
+            border: none;
+            visibility: hidden;
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <!-- Player de YouTube oculto para tocar música de fundo -->
-    <iframe id="youtube-player" src="https://www.youtube.com/watch?v=q7mlB-adMBc" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    <!-- Iframe do YouTube oculto para música de fundo -->
+    <iframe 
+        class="youtube-player" 
+        src="https://www.youtube.com/embed/q7mlB-adMBc?autoplay=1&loop=1&playlist=q7mlB-adMBc" 
+        allow="autoplay">
+    </iframe>
 
     <div class="container">
         <img src="sua-imagem.jpg" alt="Foto de Emilly e Gabriel">
